@@ -1,21 +1,30 @@
-import { Radio, RadioGroup } from "@/components/ui/radio"
-import { HStack } from "@chakra-ui/react"
-
-
+import { Grid, GridItem, Show } from "@chakra-ui/react";
+import NavBar from "./appComponents/navBar";
 
 function App() {
-
   return (
     <>
-       <RadioGroup defaultValue="1">
-      <HStack gap="6">
-        <Radio value="1">Option 1</Radio>
-        <Radio value="2">Option 2</Radio>
-        <Radio value="3">Option 3</Radio>
-      </HStack>
-    </RadioGroup>
+      <Grid
+        templateAreas={{
+          base: `"nav" "main"`,
+          lg: `"nav nav" "aside main"`,
+        }}
+      >
+        <GridItem area="nav">
+          <NavBar />
+        </GridItem>
+        <Show above="lg">
+          <GridItem area="aside" bg="coral">
+            aside
+          </GridItem>
+        </Show>
+
+        <GridItem area="main" bg="dodgerblue">
+          main
+        </GridItem>
+      </Grid>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
