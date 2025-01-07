@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# Game Hub 🎮
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Game Hub is a modern, responsive web application for exploring and discovering video games. It provides detailed information about games, including genre, platform, and rating. This project is designed using React and TypeScript, styled with Chakra UI, and fetches data from a third-party API.
 
-Currently, two official plugins are available:
+## Live Demo 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out the live version of the project hosted on Vercel:  
+[Game Hub Live](https://game-hub-project-isz8mr6d7-abobakrs-projects-3fc23eb6.vercel.app/)
 
-## Expanding the ESLint configuration
+## Features ✨
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Browse games by genres and platforms.
+- View detailed information about each game.
+- Responsive design for an optimized experience across devices.
+- Skeleton loaders for a smooth user experience during data loading.
+- Modern UI built with Chakra UI.
 
-- Configure the top-level `parserOptions` property like this:
+## Tech Stack 🛠️
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Frontend Framework**: React with TypeScript
+- **Styling**: Chakra UI
+- **State Management**: React Hooks
+- **API**: Axios for fetching data from the [RAWG Video Games Database API](https://rawg.io/apidocs)
+- **Hosting**: Vercel
+
+## Installation and Setup ⚙️
+
+1. Clone the repository:
+
+```bash
+   git clone https://github.com/AbobakrSaeed/game-hub-project.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+   cd game-hub-project
+   npm install
 ```
+
+3. run the project
+
+```bash
+   npm run dev
+```
+
+Feel free to reach out if you have any questions or feedback!
