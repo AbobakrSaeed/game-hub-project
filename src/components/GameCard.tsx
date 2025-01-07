@@ -9,17 +9,22 @@ interface props {
 }
 const GameCard = ({ game }: props) => {
   return (
-    <Card borderRadius={10} boxShadow="md" color="white" overflow={"hidden"}>
+    <Card
+      width="300px"
+      borderRadius={10}
+      boxShadow="md"
+      color="white"
+      overflow={"hidden"}
+    >
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <Heading fontSize={"2xl"}>{game.name}</Heading>
-        <HStack justifyContent='space-between'>
-        <PlatformIcons
-          platforms={game.parent_platforms.map((b) => b.platform)}
-        />
-        <CriticScore metacritic={game.metacritic} />
+        <HStack justifyContent="space-between">
+          <PlatformIcons
+            platforms={game.parent_platforms.map((b) => b.platform)}
+          />
+          <CriticScore metacritic={game.metacritic} />
         </HStack>
-        
       </CardBody>
     </Card>
   );
