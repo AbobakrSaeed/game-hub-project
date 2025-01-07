@@ -4,7 +4,7 @@
 The function getCroppedImageUrl takes this url and returns the cropped version of it.
 -the cropped image url will be: https://api.rawg.io/media/crop/600/400/games/2ba/......jpg
 */
-import noImage from '../assets/noImage.png';
+import noImage from '../assets/no-image.webp';
 const getCroppedImageUrl = (url:string) => {
 
     if(!url) return noImage;
