@@ -13,3 +13,6 @@ createRoot(document.getElementById("root")!).render(
     </ChakraProvider>
   </StrictMode>
 );
+
+////////the server api used for this project/////
+////https://api.rawg.io/docs/#operation/games_list////
