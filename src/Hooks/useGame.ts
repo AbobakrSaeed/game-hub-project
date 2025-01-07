@@ -16,8 +16,15 @@ export interface Game {
   metacritic: number;
 };
 
-const useGames= (selectedGenre:Genre | null)=>{  
- return  useGenericData<Game>('/games', {params: {genreId: selectedGenre?.id}}, [selectedGenre?.id]);
+const useGames= (selectedGenre:Genre | null, selectedPlatform:Platform|null)=>{  
+ return  useGenericData<Game>('/games', 
+  {
+    params: 
+    {
+      genres: selectedGenre?.id,
+      platforms: selectedPlatform?.id
+      }
+  }, [selectedGenre?.id,selectedPlatform?.id]);
 }
 
 //{params: {genreId: selectedGenre?.id}}, pass the genreId as a querystring parameter to the url
