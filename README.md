@@ -5,7 +5,7 @@ Game Hub is a modern, responsive web application for exploring and discovering v
 ## Live Demo 🚀
 
 Check out the live version of the project hosted on Vercel:  
-[Game Hub Live](https://game-hub-project-isz8mr6d7-abobakrs-projects-3fc23eb6.vercel.app/)
+[Game Hub Live](https://game-hub-project-henna.vercel.app/)
 
 ## Features ✨
 
